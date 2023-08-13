@@ -11,9 +11,9 @@ provider "aws" {
 
 }
 
-var myConfig = new AWS.Config({
-    credentials: myCredentials, region: 'ap-south-1'
-});
+aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+aws-region: ${{ secrets.AWS_REGION }}
 
 resource "aws_iam_role" "eks-iam-role" {
  name = "greens-cluster-eks-iam-role"
